@@ -13,19 +13,17 @@ import PromiseKit
 class LiveDataRestClient {
     let uri = "http://ec2-54-67-95-108.us-west-1.compute.amazonaws.com:8000"
 
-    func getData(serialNumber:Int) -> Promise<Hardware>{
+    func getData(serialNumber:Int) -> Promise<Int?>{
         let q = DispatchQueue.global()
-
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
         let parameters: Parameters = ["serialNumber": serialNumber]
 
         return firstly {
-            Alamofire.request(uri+"/bbb/check_rpm", method: .post, parameters: parameters).responseData()
-            
+            Alamofire.request(uri+"/bbb/check_rpm", method: .get, parameters: parameters).responseData()
             }
             .map(on: q) { data, rsp in
-               try JSONDecoder(Hardware.self, from: data)
+                (Hardware.self, from: data)
             }
             .ensure {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -36,3 +34,4 @@ class LiveDataRestClient {
 }
 
 //447550254
+

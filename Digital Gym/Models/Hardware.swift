@@ -8,12 +8,7 @@
 
 import Foundation
 
-class Hardware:Decodable {
-    
-    enum codingKeys: String, CodingKey {
-        case serialNumber = "serialNumber"
-        case rpm = "rpm"
-    }
+class Hardware {
     
     var serialNumber: Int?
     var rpm: Int?

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PromiseKit
 
 class ProfileController: UIViewController{
     @IBOutlet weak var name: UILabel!
@@ -24,9 +25,9 @@ class ProfileController: UIViewController{
 
     @IBAction func SeeDataPressed(_ sender: Any) {
         let rest = LiveDataRestClient()
-        let rpm = rest.getData(serialNumber:Int(SerialNumberInput.text!)!)
-            
-        global_hardware.rpm = rpm
+        let rpmValue = rest.getData(serialNumber:Int(SerialNumberInput.text!)!)
+        
+        global_hardware.rpm = rpmValue
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LiveDataController")
         self.navigationController?.pushViewController(vc, animated: true)
