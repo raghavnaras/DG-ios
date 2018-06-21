@@ -1,0 +1,954 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E09424F205CFEC6003C470C /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09424E205CFEC6003C470C /* ScanController.swift */; };
+		0E094251205D047D003C470C /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E094250205D047D003C470C /* ProfileController.swift */; };
+		0E094253205D053B003C470C /* LiveDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E094252205D053B003C470C /* LiveDataController.swift */; };
+		0E094255205D0D6E003C470C /* vc_utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E094254205D0D6E003C470C /* vc_utils.swift */; };
+		0E805C34205CED870019DA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C33205CED870019DA91 /* AppDelegate.swift */; };
+		0E805C36205CED870019DA91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C35205CED870019DA91 /* ViewController.swift */; };
+		0E805C39205CED870019DA91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C37205CED870019DA91 /* Main.storyboard */; };
+		0E805C3C205CED870019DA91 /* Digital_Gym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C3A205CED870019DA91 /* Digital_Gym.xcdatamodeld */; };
+		0E805C3E205CED870019DA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C3D205CED870019DA91 /* Assets.xcassets */; };
+		0E805C41205CED870019DA91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C3F205CED870019DA91 /* LaunchScreen.storyboard */; };
+		0E805C4C205CED870019DA91 /* Digital_GymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C4B205CED870019DA91 /* Digital_GymTests.swift */; };
+		0E805C57205CED870019DA91 /* Digital_GymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C56205CED870019DA91 /* Digital_GymUITests.swift */; };
+		0E805C71205CEF150019DA91 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C65205CEF150019DA91 /* OpenSans-SemiBold.ttf */; };
+		0E805C72205CEF150019DA91 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C66205CEF150019DA91 /* OpenSans-Light.ttf */; };
+		0E805C73205CEF150019DA91 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C67205CEF150019DA91 /* OpenSans-Italic.ttf */; };
+		0E805C74205CEF150019DA91 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C68205CEF150019DA91 /* OpenSans-ExtraBold.ttf */; };
+		0E805C75205CEF150019DA91 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C69205CEF150019DA91 /* OpenSans-LightItalic.ttf */; };
+		0E805C76205CEF150019DA91 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C6A205CEF150019DA91 /* OpenSans-Bold.ttf */; };
+		0E805C77205CEF150019DA91 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C6B205CEF150019DA91 /* OpenSans-SemiBoldItalic.ttf */; };
+		0E805C78205CEF150019DA91 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C6C205CEF150019DA91 /* OpenSans-ExtraBoldItalic.ttf */; };
+		0E805C79205CEF150019DA91 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C6D205CEF150019DA91 /* OpenSans-Regular.ttf */; };
+		0E805C7A205CEF150019DA91 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C6E205CEF150019DA91 /* OpenSans-BoldItalic.ttf */; };
+		0E805C7B205CEF150019DA91 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E805C70205CEF150019DA91 /* back.png */; };
+		0E805C82205CEF6F0019DA91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C7D205CEF6E0019DA91 /* User.swift */; };
+		0E805C83205CEF6F0019DA91 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C7E205CEF6F0019DA91 /* LoginController.swift */; };
+		0E805C84205CEF6F0019DA91 /* RegPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C7F205CEF6F0019DA91 /* RegPage.swift */; };
+		0E805C85205CEF6F0019DA91 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E805C80205CEF6F0019DA91 /* RestClient.swift */; };
+		0EA088FF205CF0A8003C13CE /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA088FD205CF0A8003C13CE /* CustomButton.swift */; };
+		0EA08900205CF0A8003C13CE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA088FE205CF0A8003C13CE /* CustomTextField.swift */; };
+		0EA08902205CF55A003C13CE /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA08901205CF55A003C13CE /* CustomizeView.swift */; };
+		0EA08904205CF813003C13CE /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA08903205CF813003C13CE /* HistoryController.swift */; };
+		0EA08907205CF877003C13CE /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA08906205CF877003C13CE /* HistoryCell.swift */; };
+		0EA0890D205CFBC3003C13CE /* scan.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA08908205CFBC3003C13CE /* scan.png */; };
+		0EA0890E205CFBC3003C13CE /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA08909205CFBC3003C13CE /* settings.png */; };
+		0EA0890F205CFBC3003C13CE /* today.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0890A205CFBC3003C13CE /* today.png */; };
+		0EA08910205CFBC3003C13CE /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0890B205CFBC3003C13CE /* user.png */; };
+		0EA08911205CFBC3003C13CE /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0890C205CFBC3003C13CE /* history.png */; };
+		0EA08913205CFD60003C13CE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA08912205CFD60003C13CE /* SettingsController.swift */; };
+		1B7A1F686F4DB490A4EB5E87 /* Pods_Digital_GymUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8F36D53A9DE9BA27377838 /* Pods_Digital_GymUITests.framework */; };
+		A0B4487220D9FB08005BCFE8 /* LiveDataRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4487120D9FB08005BCFE8 /* LiveDataRestClient.swift */; };
+		A0D25C4220DAF33F00AA47FF /* Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D25C4120DAF33F00AA47FF /* Hardware.swift */; };
+		AB868D203E04A665920959C8 /* Pods_Digital_Gym.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B7E3DFA246C59BA81F43F1 /* Pods_Digital_Gym.framework */; };
+		B7E4E981BB05C8DBFAFD8E82 /* Pods_Digital_GymTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8CBA0C91B11DDAC8A6A334 /* Pods_Digital_GymTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E805C48205CED870019DA91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E805C28205CED870019DA91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E805C2F205CED870019DA91;
+			remoteInfo = "Digital Gym";
+		};
+		0E805C53205CED870019DA91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E805C28205CED870019DA91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E805C2F205CED870019DA91;
+			remoteInfo = "Digital Gym";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D8F36D53A9DE9BA27377838 /* Pods_Digital_GymUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digital_GymUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E09424E205CFEC6003C470C /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
+		0E094250205D047D003C470C /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		0E094252205D053B003C470C /* LiveDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataController.swift; sourceTree = "<group>"; };
+		0E094254205D0D6E003C470C /* vc_utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_utils.swift; sourceTree = "<group>"; };
+		0E805C30205CED870019DA91 /* Digital Gym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Gym.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E805C33205CED870019DA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0E805C35205CED870019DA91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E805C38205CED870019DA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E805C3B205CED870019DA91 /* Digital_Gym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Digital_Gym.xcdatamodel; sourceTree = "<group>"; };
+		0E805C3D205CED870019DA91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E805C40205CED870019DA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E805C42205CED870019DA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E805C47205CED870019DA91 /* Digital GymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Digital GymTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E805C4B205CED870019DA91 /* Digital_GymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digital_GymTests.swift; sourceTree = "<group>"; };
+		0E805C4D205CED870019DA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E805C52205CED870019DA91 /* Digital GymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Digital GymUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E805C56205CED870019DA91 /* Digital_GymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digital_GymUITests.swift; sourceTree = "<group>"; };
+		0E805C58205CED870019DA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E805C65205CEF150019DA91 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		0E805C66205CEF150019DA91 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		0E805C67205CEF150019DA91 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		0E805C68205CEF150019DA91 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0E805C69205CEF150019DA91 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		0E805C6A205CEF150019DA91 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		0E805C6B205CEF150019DA91 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		0E805C6C205CEF150019DA91 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		0E805C6D205CEF150019DA91 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		0E805C6E205CEF150019DA91 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0E805C70205CEF150019DA91 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		0E805C7D205CEF6E0019DA91 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0E805C7E205CEF6F0019DA91 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		0E805C7F205CEF6F0019DA91 /* RegPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegPage.swift; sourceTree = "<group>"; };
+		0E805C80205CEF6F0019DA91 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		0EA088FD205CF0A8003C13CE /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0EA088FE205CF0A8003C13CE /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0EA08901205CF55A003C13CE /* CustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
+		0EA08903205CF813003C13CE /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		0EA08906205CF877003C13CE /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		0EA08908205CFBC3003C13CE /* scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scan.png; sourceTree = "<group>"; };
+		0EA08909205CFBC3003C13CE /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		0EA0890A205CFBC3003C13CE /* today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = today.png; sourceTree = "<group>"; };
+		0EA0890B205CFBC3003C13CE /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		0EA0890C205CFBC3003C13CE /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		0EA08912205CFD60003C13CE /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		1B8CBA0C91B11DDAC8A6A334 /* Pods_Digital_GymTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digital_GymTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B7E3DFA246C59BA81F43F1 /* Pods_Digital_Gym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digital_Gym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25FB319583FA9AA18FAEF3DD /* Pods-Digital GymTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital GymTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Digital GymTests/Pods-Digital GymTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30EF3FA0430691BD7498D413 /* Pods-Digital GymUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital GymUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digital GymUITests/Pods-Digital GymUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3889BBAC5DA6C629FB76D5C8 /* Pods-Digital GymTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital GymTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digital GymTests/Pods-Digital GymTests.release.xcconfig"; sourceTree = "<group>"; };
+		3BEB557A2B9B86765B7B0765 /* Pods-Digital Gym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital Gym.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digital Gym/Pods-Digital Gym.release.xcconfig"; sourceTree = "<group>"; };
+		76AEE7E45A114837ED73C917 /* Pods-Digital GymUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital GymUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Digital GymUITests/Pods-Digital GymUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0B4487120D9FB08005BCFE8 /* LiveDataRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataRestClient.swift; sourceTree = "<group>"; };
+		A0D25C4120DAF33F00AA47FF /* Hardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hardware.swift; sourceTree = "<group>"; };
+		C20C1489BFF24C0D9A333CC3 /* Pods-Digital Gym.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital Gym.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Digital Gym/Pods-Digital Gym.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E805C2D205CED870019DA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB868D203E04A665920959C8 /* Pods_Digital_Gym.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E805C44205CED870019DA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E4E981BB05C8DBFAFD8E82 /* Pods_Digital_GymTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E805C4F205CED870019DA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B7A1F686F4DB490A4EB5E87 /* Pods_Digital_GymUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E094256205D0D8A003C470C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				0E094254205D0D6E003C470C /* vc_utils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		0E805C27205CED870019DA91 = {
+			isa = PBXGroup;
+			children = (
+				0E805C32205CED870019DA91 /* Digital Gym */,
+				0E805C4A205CED870019DA91 /* Digital GymTests */,
+				0E805C55205CED870019DA91 /* Digital GymUITests */,
+				0E805C31205CED870019DA91 /* Products */,
+				7ED185981CC94D17F8964B98 /* Pods */,
+				2873472C3D8406E9774DF7A1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0E805C31205CED870019DA91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E805C30205CED870019DA91 /* Digital Gym.app */,
+				0E805C47205CED870019DA91 /* Digital GymTests.xctest */,
+				0E805C52205CED870019DA91 /* Digital GymUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E805C32205CED870019DA91 /* Digital Gym */ = {
+			isa = PBXGroup;
+			children = (
+				0E094256205D0D8A003C470C /* utils */,
+				0EA08905205CF86D003C13CE /* cells */,
+				0E805C33205CED870019DA91 /* AppDelegate.swift */,
+				0E805C35205CED870019DA91 /* ViewController.swift */,
+				0E805C37205CED870019DA91 /* Main.storyboard */,
+				0E094250205D047D003C470C /* ProfileController.swift */,
+				0E805C3D205CED870019DA91 /* Assets.xcassets */,
+				0E805C7E205CEF6F0019DA91 /* LoginController.swift */,
+				0EA088FC205CF0A8003C13CE /* Customize */,
+				0E805C7C205CEF6E0019DA91 /* Models */,
+				0E805C7F205CEF6F0019DA91 /* RegPage.swift */,
+				0E805C80205CEF6F0019DA91 /* RestClient.swift */,
+				0E805C64205CEF150019DA91 /* fonts */,
+				0E805C6F205CEF150019DA91 /* images */,
+				0E805C3F205CED870019DA91 /* LaunchScreen.storyboard */,
+				0E805C42205CED870019DA91 /* Info.plist */,
+				0E805C3A205CED870019DA91 /* Digital_Gym.xcdatamodeld */,
+				0EA08903205CF813003C13CE /* HistoryController.swift */,
+				0EA08912205CFD60003C13CE /* SettingsController.swift */,
+				0E09424E205CFEC6003C470C /* ScanController.swift */,
+				0E094252205D053B003C470C /* LiveDataController.swift */,
+				A0B4487120D9FB08005BCFE8 /* LiveDataRestClient.swift */,
+			);
+			path = "Digital Gym";
+			sourceTree = "<group>";
+		};
+		0E805C4A205CED870019DA91 /* Digital GymTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E805C4B205CED870019DA91 /* Digital_GymTests.swift */,
+				0E805C4D205CED870019DA91 /* Info.plist */,
+			);
+			path = "Digital GymTests";
+			sourceTree = "<group>";
+		};
+		0E805C55205CED870019DA91 /* Digital GymUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0E805C56205CED870019DA91 /* Digital_GymUITests.swift */,
+				0E805C58205CED870019DA91 /* Info.plist */,
+			);
+			path = "Digital GymUITests";
+			sourceTree = "<group>";
+		};
+		0E805C64205CEF150019DA91 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0E805C65205CEF150019DA91 /* OpenSans-SemiBold.ttf */,
+				0E805C66205CEF150019DA91 /* OpenSans-Light.ttf */,
+				0E805C67205CEF150019DA91 /* OpenSans-Italic.ttf */,
+				0E805C68205CEF150019DA91 /* OpenSans-ExtraBold.ttf */,
+				0E805C69205CEF150019DA91 /* OpenSans-LightItalic.ttf */,
+				0E805C6A205CEF150019DA91 /* OpenSans-Bold.ttf */,
+				0E805C6B205CEF150019DA91 /* OpenSans-SemiBoldItalic.ttf */,
+				0E805C6C205CEF150019DA91 /* OpenSans-ExtraBoldItalic.ttf */,
+				0E805C6D205CEF150019DA91 /* OpenSans-Regular.ttf */,
+				0E805C6E205CEF150019DA91 /* OpenSans-BoldItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		0E805C6F205CEF150019DA91 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0EA0890C205CFBC3003C13CE /* history.png */,
+				0EA08908205CFBC3003C13CE /* scan.png */,
+				0EA08909205CFBC3003C13CE /* settings.png */,
+				0EA0890A205CFBC3003C13CE /* today.png */,
+				0EA0890B205CFBC3003C13CE /* user.png */,
+				0E805C70205CEF150019DA91 /* back.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		0E805C7C205CEF6E0019DA91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E805C7D205CEF6E0019DA91 /* User.swift */,
+				A0D25C4120DAF33F00AA47FF /* Hardware.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		0EA088FC205CF0A8003C13CE /* Customize */ = {
+			isa = PBXGroup;
+			children = (
+				0EA088FD205CF0A8003C13CE /* CustomButton.swift */,
+				0EA088FE205CF0A8003C13CE /* CustomTextField.swift */,
+				0EA08901205CF55A003C13CE /* CustomizeView.swift */,
+			);
+			path = Customize;
+			sourceTree = "<group>";
+		};
+		0EA08905205CF86D003C13CE /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				0EA08906205CF877003C13CE /* HistoryCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		2873472C3D8406E9774DF7A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23B7E3DFA246C59BA81F43F1 /* Pods_Digital_Gym.framework */,
+				1B8CBA0C91B11DDAC8A6A334 /* Pods_Digital_GymTests.framework */,
+				0D8F36D53A9DE9BA27377838 /* Pods_Digital_GymUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ED185981CC94D17F8964B98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C20C1489BFF24C0D9A333CC3 /* Pods-Digital Gym.debug.xcconfig */,
+				3BEB557A2B9B86765B7B0765 /* Pods-Digital Gym.release.xcconfig */,
+				25FB319583FA9AA18FAEF3DD /* Pods-Digital GymTests.debug.xcconfig */,
+				3889BBAC5DA6C629FB76D5C8 /* Pods-Digital GymTests.release.xcconfig */,
+				76AEE7E45A114837ED73C917 /* Pods-Digital GymUITests.debug.xcconfig */,
+				30EF3FA0430691BD7498D413 /* Pods-Digital GymUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E805C2F205CED870019DA91 /* Digital Gym */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E805C5B205CED870019DA91 /* Build configuration list for PBXNativeTarget "Digital Gym" */;
+			buildPhases = (
+				6B926D0DA8C5BDC650DC49DF /* [CP] Check Pods Manifest.lock */,
+				0E805C2C205CED870019DA91 /* Sources */,
+				0E805C2D205CED870019DA91 /* Frameworks */,
+				0E805C2E205CED870019DA91 /* Resources */,
+				69A3D06C8A64B5A967FF4BA0 /* [CP] Embed Pods Frameworks */,
+				007805FB2293F2B77E83A8F4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Digital Gym";
+			productName = "Digital Gym";
+			productReference = 0E805C30205CED870019DA91 /* Digital Gym.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E805C46205CED870019DA91 /* Digital GymTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E805C5E205CED870019DA91 /* Build configuration list for PBXNativeTarget "Digital GymTests" */;
+			buildPhases = (
+				5BB41DAE47ACC9BF92D48389 /* [CP] Check Pods Manifest.lock */,
+				0E805C43205CED870019DA91 /* Sources */,
+				0E805C44205CED870019DA91 /* Frameworks */,
+				0E805C45205CED870019DA91 /* Resources */,
+				84F3F0FA481465F7B14C7DB5 /* [CP] Embed Pods Frameworks */,
+				DCDD388A1910C410A73A560E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E805C49205CED870019DA91 /* PBXTargetDependency */,
+			);
+			name = "Digital GymTests";
+			productName = "Digital GymTests";
+			productReference = 0E805C47205CED870019DA91 /* Digital GymTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0E805C51205CED870019DA91 /* Digital GymUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E805C61205CED870019DA91 /* Build configuration list for PBXNativeTarget "Digital GymUITests" */;
+			buildPhases = (
+				0720FB47AA1B39DB04629383 /* [CP] Check Pods Manifest.lock */,
+				0E805C4E205CED870019DA91 /* Sources */,
+				0E805C4F205CED870019DA91 /* Frameworks */,
+				0E805C50205CED870019DA91 /* Resources */,
+				B3F69D25C13D023B2E77E195 /* [CP] Embed Pods Frameworks */,
+				29F7B8F406CE55459674AAA0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E805C54205CED870019DA91 /* PBXTargetDependency */,
+			);
+			name = "Digital GymUITests";
+			productName = "Digital GymUITests";
+			productReference = 0E805C52205CED870019DA91 /* Digital GymUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E805C28205CED870019DA91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = southpawac;
+				TargetAttributes = {
+					0E805C2F205CED870019DA91 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					0E805C46205CED870019DA91 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0E805C2F205CED870019DA91;
+					};
+					0E805C51205CED870019DA91 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0E805C2F205CED870019DA91;
+					};
+				};
+			};
+			buildConfigurationList = 0E805C2B205CED870019DA91 /* Build configuration list for PBXProject "Digital Gym" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E805C27205CED870019DA91;
+			productRefGroup = 0E805C31205CED870019DA91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E805C2F205CED870019DA91 /* Digital Gym */,
+				0E805C46205CED870019DA91 /* Digital GymTests */,
+				0E805C51205CED870019DA91 /* Digital GymUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E805C2E205CED870019DA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EA0890E205CFBC3003C13CE /* settings.png in Resources */,
+				0E805C71205CEF150019DA91 /* OpenSans-SemiBold.ttf in Resources */,
+				0EA08910205CFBC3003C13CE /* user.png in Resources */,
+				0E805C41205CED870019DA91 /* LaunchScreen.storyboard in Resources */,
+				0E805C74205CEF150019DA91 /* OpenSans-ExtraBold.ttf in Resources */,
+				0E805C3E205CED870019DA91 /* Assets.xcassets in Resources */,
+				0E805C7B205CEF150019DA91 /* back.png in Resources */,
+				0E805C77205CEF150019DA91 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				0E805C73205CEF150019DA91 /* OpenSans-Italic.ttf in Resources */,
+				0E805C76205CEF150019DA91 /* OpenSans-Bold.ttf in Resources */,
+				0E805C72205CEF150019DA91 /* OpenSans-Light.ttf in Resources */,
+				0E805C7A205CEF150019DA91 /* OpenSans-BoldItalic.ttf in Resources */,
+				0E805C75205CEF150019DA91 /* OpenSans-LightItalic.ttf in Resources */,
+				0EA0890D205CFBC3003C13CE /* scan.png in Resources */,
+				0E805C78205CEF150019DA91 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				0E805C79205CEF150019DA91 /* OpenSans-Regular.ttf in Resources */,
+				0E805C39205CED870019DA91 /* Main.storyboard in Resources */,
+				0EA0890F205CFBC3003C13CE /* today.png in Resources */,
+				0EA08911205CFBC3003C13CE /* history.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E805C45205CED870019DA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E805C50205CED870019DA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		007805FB2293F2B77E83A8F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital Gym/Pods-Digital Gym-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0720FB47AA1B39DB04629383 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29F7B8F406CE55459674AAA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital GymUITests/Pods-Digital GymUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BB41DAE47ACC9BF92D48389 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69A3D06C8A64B5A967FF4BA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital Gym/Pods-Digital Gym-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B926D0DA8C5BDC650DC49DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84F3F0FA481465F7B14C7DB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital GymTests/Pods-Digital GymTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3F69D25C13D023B2E77E195 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital GymUITests/Pods-Digital GymUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCDD388A1910C410A73A560E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital GymTests/Pods-Digital GymTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E805C2C205CED870019DA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E805C82205CEF6F0019DA91 /* User.swift in Sources */,
+				0EA08913205CFD60003C13CE /* SettingsController.swift in Sources */,
+				0E805C84205CEF6F0019DA91 /* RegPage.swift in Sources */,
+				0E094253205D053B003C470C /* LiveDataController.swift in Sources */,
+				0EA08902205CF55A003C13CE /* CustomizeView.swift in Sources */,
+				0E094255205D0D6E003C470C /* vc_utils.swift in Sources */,
+				A0B4487220D9FB08005BCFE8 /* LiveDataRestClient.swift in Sources */,
+				0E805C36205CED870019DA91 /* ViewController.swift in Sources */,
+				0E094251205D047D003C470C /* ProfileController.swift in Sources */,
+				0E805C34205CED870019DA91 /* AppDelegate.swift in Sources */,
+				A0D25C4220DAF33F00AA47FF /* Hardware.swift in Sources */,
+				0EA088FF205CF0A8003C13CE /* CustomButton.swift in Sources */,
+				0EA08907205CF877003C13CE /* HistoryCell.swift in Sources */,
+				0E09424F205CFEC6003C470C /* ScanController.swift in Sources */,
+				0E805C3C205CED870019DA91 /* Digital_Gym.xcdatamodeld in Sources */,
+				0E805C85205CEF6F0019DA91 /* RestClient.swift in Sources */,
+				0EA08904205CF813003C13CE /* HistoryController.swift in Sources */,
+				0E805C83205CEF6F0019DA91 /* LoginController.swift in Sources */,
+				0EA08900205CF0A8003C13CE /* CustomTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E805C43205CED870019DA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E805C4C205CED870019DA91 /* Digital_GymTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E805C4E205CED870019DA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E805C57205CED870019DA91 /* Digital_GymUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E805C49205CED870019DA91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E805C2F205CED870019DA91 /* Digital Gym */;
+			targetProxy = 0E805C48205CED870019DA91 /* PBXContainerItemProxy */;
+		};
+		0E805C54205CED870019DA91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E805C2F205CED870019DA91 /* Digital Gym */;
+			targetProxy = 0E805C53205CED870019DA91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0E805C37205CED870019DA91 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E805C38205CED870019DA91 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0E805C3F205CED870019DA91 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E805C40205CED870019DA91 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E805C59205CED870019DA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0E805C5A205CED870019DA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E805C5C205CED870019DA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C20C1489BFF24C0D9A333CC3 /* Pods-Digital Gym.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63R53WL8RB;
+				INFOPLIST_FILE = "Digital Gym/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raghavnaras01-gmail.com";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0E805C5D205CED870019DA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BEB557A2B9B86765B7B0765 /* Pods-Digital Gym.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63R53WL8RB;
+				INFOPLIST_FILE = "Digital Gym/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raghavnaras01-gmail.com";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0E805C5F205CED870019DA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25FB319583FA9AA18FAEF3DD /* Pods-Digital GymTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56W2NPXKTS;
+				INFOPLIST_FILE = "Digital GymTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "southpawac.Digital-GymTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Digital Gym.app/Digital Gym";
+			};
+			name = Debug;
+		};
+		0E805C60205CED870019DA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3889BBAC5DA6C629FB76D5C8 /* Pods-Digital GymTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56W2NPXKTS;
+				INFOPLIST_FILE = "Digital GymTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "southpawac.Digital-GymTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Digital Gym.app/Digital Gym";
+			};
+			name = Release;
+		};
+		0E805C62205CED870019DA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76AEE7E45A114837ED73C917 /* Pods-Digital GymUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56W2NPXKTS;
+				INFOPLIST_FILE = "Digital GymUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "southpawac.Digital-GymUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Digital Gym";
+			};
+			name = Debug;
+		};
+		0E805C63205CED870019DA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30EF3FA0430691BD7498D413 /* Pods-Digital GymUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56W2NPXKTS;
+				INFOPLIST_FILE = "Digital GymUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "southpawac.Digital-GymUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Digital Gym";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E805C2B205CED870019DA91 /* Build configuration list for PBXProject "Digital Gym" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E805C59205CED870019DA91 /* Debug */,
+				0E805C5A205CED870019DA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E805C5B205CED870019DA91 /* Build configuration list for PBXNativeTarget "Digital Gym" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E805C5C205CED870019DA91 /* Debug */,
+				0E805C5D205CED870019DA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E805C5E205CED870019DA91 /* Build configuration list for PBXNativeTarget "Digital GymTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E805C5F205CED870019DA91 /* Debug */,
+				0E805C60205CED870019DA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E805C61205CED870019DA91 /* Build configuration list for PBXNativeTarget "Digital GymUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E805C62205CED870019DA91 /* Debug */,
+				0E805C63205CED870019DA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0E805C3A205CED870019DA91 /* Digital_Gym.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0E805C3B205CED870019DA91 /* Digital_Gym.xcdatamodel */,
+			);
+			currentVersion = 0E805C3B205CED870019DA91 /* Digital_Gym.xcdatamodel */;
+			path = Digital_Gym.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0E805C28205CED870019DA91 /* Project object */;
+}
