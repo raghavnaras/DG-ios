@@ -19,7 +19,7 @@ class LiveDataController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LiveDataOutput.text = "hi"
+        LiveDataOutput.text = "Live Data"
         lastRPM.text = String(global_hardware.rpm!)
         
         //start timer to poll the server for updates

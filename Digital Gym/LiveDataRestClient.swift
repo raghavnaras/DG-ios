@@ -25,7 +25,7 @@ class LiveDataRestClient {
             
             }
             .map(on: q) { data, rsp in
-               try Swift.Decoder(Hardware.self, from: data)
+               try JSONDecoder(Hardware.self, from: data)
             }
             .ensure {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
