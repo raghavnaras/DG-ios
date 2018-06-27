@@ -8,8 +8,17 @@
 
 import Foundation
 
-class Hardware {
+class Hardware:Decodable {
     
-    var serialNumber: Int?
-    var rpm: Int?
+    enum codingKeys: String, CodingKey {
+        case rpm = "rpm"
+        case success = "success"
+        case bikeID = "bikeID"
+        case token = "token"
+    }
+    
+     var rpm: Int?
+     static var success: Bool?
+     static var bikeID: Int?
+     var token: String?
 }

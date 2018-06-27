@@ -11,19 +11,19 @@ import Alamofire
 import PromiseKit
 
 class LiveDataRestClient {
-    let uri = "http://ec2-54-67-95-108.us-west-1.compute.amazonaws.com:8000"
+    let uri = "http://localhost:8000"
 
-    func getData(serialNumber:Int) -> Promise<Int?>{
+    func getCurrentRpm(bikeID:Int) -> Promise<Hardware>{
         let q = DispatchQueue.global()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
-        let parameters: Parameters = ["serialNumber": serialNumber]
+        let parameters: Parameters = ["bikeID": bikeID]
 
         return firstly {
-            Alamofire.request(uri+"/bbb/check_rpm", method: .get, parameters: parameters).responseData()
+            Alamofire.request(uri+"/bbb/rpmfrombikeid", method: .get, parameters: parameters).responseData()
             }
             .map(on: q) { data, rsp in
-                (Hardware.self, from: data)
+                try JSONDecoder().decode(Hardware.self, from: data)
             }
             .ensure {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false

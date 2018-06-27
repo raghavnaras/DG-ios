@@ -11,16 +11,29 @@ import Alamofire
 
 class LiveDataController: UIViewController{
     
-    let uri="http://ec2-54-67-95-108.us-west-1.compute.amazonaws.com:8000"
-    
-    @IBOutlet weak var lastRPM: UILabel!
     @IBOutlet weak var LiveDataOutput: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LiveDataOutput.text = "Live Data"
-        lastRPM.text = String(global_hardware.rpm!)
+        
+        LiveDataOutput.text = "Scan QR code to see live data"
+        
+        
+        let alert = UIAlertController(title: "Live Data", message: "Your bikeID is \(Hardware.bikeID!). There is no live data to display.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+
+        
+//        let rest = LiveDataRestClient()
+//        
+//        if (Hardware.success)! {
+//            let rpm = rest.getCurrentRpm(bikeID: Hardware.bikeID!)
+//            print(rpm)
+//        }
+//        
+//        else {
+//            lastRPM.text="No live data found"
+//        }
         
         //start timer to poll the server for updates
     }

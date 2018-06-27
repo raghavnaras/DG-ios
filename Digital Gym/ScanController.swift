@@ -114,8 +114,6 @@ class ScanController: UIViewController {
 //
 //        present(alertPrompt, animated: true, completion: nil)
     }
-    
-    
 
 }
 
@@ -140,9 +138,17 @@ extension ScanController: AVCaptureMetadataOutputObjectsDelegate {
             if metadataObj.stringValue != nil {
                 launchApp(decodedURL: metadataObj.stringValue!)
                 messageLabel.text = metadataObj.stringValue
-                var bikeid = Int(metadataObj.stringValue!)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { //adding delay so that it is not immediate
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "LiveDataController")
+                    self.navigationController?.pushViewController(vc, animated: false)
+                }
+                
+                var bikeID = Int(metadataObj.stringValue!)
+                Hardware.bikeID = bikeID
+             
             }
-            
         }
     }
     

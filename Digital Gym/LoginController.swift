@@ -11,11 +11,11 @@ import UIKit
 
 class LoginController:UIViewController, UITextFieldDelegate{
     
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
     @IBAction func loginPressed(_ sender: Any) {
         let rest = RestClient()
         let _ = rest.login(email: emailInput.text!, password: passwordInput.text!).done { (user) in
@@ -24,14 +24,26 @@ class LoginController:UIViewController, UITextFieldDelegate{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
                 self.navigationController?.pushViewController(vc, animated: true)
-            }else{
-                self.alert(message: user.message!)
+            }
+                
+            else{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
-    @IBOutlet weak var passwordInput: CustomTextField!
+    
+    
     @IBOutlet weak var emailInput: CustomTextField!
+    
+    @IBOutlet weak var passwordInput: CustomTextField!
     @IBAction func backPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    
+ 
 }
+
