@@ -7,20 +7,19 @@
 //
 
 import Foundation
-import PromiseKit
+import PromiseKit 
 import Alamofire
 
 class RestClient{
 
-    let uri = "http://ec2-54-67-95-108.us-west-1.compute.amazonaws.com:8000"
-    
+    let uri = "http://127.0.0.1:5000"
     func login(email: String, password: String) -> Promise<User> {
         let q = DispatchQueue.global()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let parameters: Parameters = ["email": email, "password": password]
         
         return firstly {
-            Alamofire.request(uri+"/bbb/login", method: .post, parameters: parameters).responseData()
+            Alamofire.request(uri+"/login", method: .post, parameters: parameters).responseData()
             }.map(on: q) { data, rsp in
                 try JSONDecoder().decode(User.self, from: data)
             }.ensure {
@@ -34,7 +33,7 @@ class RestClient{
         let parameters: Parameters = ["email": email, "password": password, "name": name]
         
         return firstly {
-            Alamofire.request(uri+"/bbb/setup_account", method: .post, parameters: parameters).responseData()
+            Alamofire.request(uri+"/setup_account", method: .post, parameters: parameters).responseData()
             }.map(on: q) { data, rsp in
                 try JSONDecoder().decode(User.self, from: data)
             }.ensure {

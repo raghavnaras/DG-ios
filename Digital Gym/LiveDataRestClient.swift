@@ -11,12 +11,11 @@ import Alamofire
 import PromiseKit
 
 class LiveDataRestClient {
-    let uri = "http://localhost:8000"
+    let uri = "ws://127.0.0.1:48409/3792f057-062c-4213-83e2-f03bdaca0a7e"
 
-    func getCurrentRpm(bikeID:Int) -> Promise<Hardware>{
+    func getCurrentRpm(bikeID:Int) -> Promise<Hardware> {
         let q = DispatchQueue.global()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-
         let parameters: Parameters = ["bikeID": bikeID]
 
         return firstly {
@@ -33,5 +32,5 @@ class LiveDataRestClient {
     
 }
 
-//4475502
+
 

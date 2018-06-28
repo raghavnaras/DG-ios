@@ -145,7 +145,7 @@ extension ScanController: AVCaptureMetadataOutputObjectsDelegate {
                     self.navigationController?.pushViewController(vc, animated: false)
                 }
                 
-                var bikeID = Int(metadataObj.stringValue!)
+                let bikeID = Int(metadataObj.stringValue!)
                 Hardware.bikeID = bikeID
              
             }
