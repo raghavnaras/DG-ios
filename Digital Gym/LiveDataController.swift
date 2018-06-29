@@ -24,7 +24,7 @@ class LiveDataController: UIViewController{
 
         let rest = LiveDataRestClient()
 
-        if (Hardware.success)! && (Hardware.success != nil){
+        if (Hardware.success)! && (Hardware.success != nil){ //success is a boolean (true or false). On the backend code different things happen if success is true or false
             let currentrpm = rest.getCurrentRpm(bikeID: Hardware.bikeID!)
             print (currentrpm)
         }

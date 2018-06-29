@@ -11,18 +11,17 @@ import Alamofire
 import PromiseKit
 
 class LiveDataRestClient {
-    let uri = "ws://127.0.0.1:48409/3792f057-062c-4213-83e2-f03bdaca0a7e"
-
+    let uri = "http://ec2-54-67-95-108.us-west-1.compute.amazonaws.com:8000" //link to the server
     func getCurrentRpm(bikeID:Int) -> Promise<Hardware> {
         let q = DispatchQueue.global()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        let parameters: Parameters = ["bikeID": bikeID]
+        let parameters: Parameters = ["bikeID": bikeID] //parameters are basically required input in order for this method to work
 
         return firstly {
-            Alamofire.request(uri+"/bbb/rpmfrombikeid", method: .get, parameters: parameters).responseData()
+            Alamofire.request(uri+"/bbb/rpmfrombikeid", method: .get, parameters: parameters).responseData() //sending request to server
             }
             .map(on: q) { data, rsp in
-                try JSONDecoder().decode(Hardware.self, from: data)
+                try JSONDecoder().decode(Hardware.self, from: data) //server sends data back as a JSON object so you have to decode this to be able to read it
             }
             .ensure {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -34,3 +33,4 @@ class LiveDataRestClient {
 
 
 
+//pcb vendor

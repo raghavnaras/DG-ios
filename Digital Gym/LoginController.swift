@@ -16,7 +16,7 @@ class LoginController:UIViewController, UITextFieldDelegate{
         return true
     }
     
-    @IBAction func loginPressed(_ sender: Any) {
+    @IBAction func loginPressed(_ sender: Any) { //this is an action so that if the loginbutton is pressed the code below happens
         let rest = RestClient()
         let _ = rest.login(email: emailInput.text!, password: passwordInput.text!).done { (user) in
             if(user.success)!{
