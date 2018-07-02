@@ -12,5 +12,11 @@ import UIKit
 
 class SettingsController: UIViewController{
     
-   
+    @IBAction func LogOut(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "IsLoggedIn")
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 }
+
+

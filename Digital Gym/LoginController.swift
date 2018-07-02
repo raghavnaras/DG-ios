@@ -20,10 +20,12 @@ class LoginController:UIViewController, UITextFieldDelegate{
         let rest = RestClient()
         let _ = rest.login(email: emailInput.text!, password: passwordInput.text!).done { (user) in
             if(user.success)!{
+                UserDefaults.standard.set(true, forKey: "IsLoggedIn")
                 global_user = user
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
                 self.navigationController?.pushViewController(vc, animated: true)
+                
             }
                 
             else{
@@ -32,8 +34,9 @@ class LoginController:UIViewController, UITextFieldDelegate{
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
+        
+
     }
-    
     
     @IBOutlet weak var emailInput: CustomTextField!
     
