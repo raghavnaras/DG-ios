@@ -24,7 +24,6 @@ class LiveDataController: UIViewController{
         let alert = UIAlertController(title: "Live Data", message: "Your bikeID is \(Hardware.bikeID!). There is no live data to display.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         self.present(alert, animated: true)
-            
         }
             
         else {
@@ -47,11 +46,13 @@ class LiveDataController: UIViewController{
 //        }
         //start timer to poll the server for updates
     }
-    @IBAction func ScanButton(_ sender: Any) {
+    
+    @IBAction func backButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     
     
     

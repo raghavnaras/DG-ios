@@ -25,7 +25,6 @@ class LoginController:UIViewController, UITextFieldDelegate{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
                 self.navigationController?.pushViewController(vc, animated: true)
-                
             }
                 
             else{
@@ -35,11 +34,11 @@ class LoginController:UIViewController, UITextFieldDelegate{
             }
         }
         
-
     }
     
     @IBOutlet weak var emailInput: CustomTextField!
-    
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("data")
     @IBOutlet weak var passwordInput: CustomTextField!
     @IBAction func backPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

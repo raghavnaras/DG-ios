@@ -18,10 +18,10 @@ class ProfileController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        name.text = "Name: \(global_user.name!)"
-        email.text = "Email: \(global_user.email!)"
-
+        
     }
+    
+
 
     
 }

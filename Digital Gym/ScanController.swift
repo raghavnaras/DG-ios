@@ -88,7 +88,6 @@ class ScanController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     // MARK: - Helper methods
     
     func launchApp(decodedURL: String) {
@@ -114,7 +113,6 @@ class ScanController: UIViewController {
 //
 //        present(alertPrompt, animated: true, completion: nil)
     }
-
 }
 
 extension ScanController: AVCaptureMetadataOutputObjectsDelegate {

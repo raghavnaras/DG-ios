@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="476" y="134"/>
         </scene>
         <!--Scan-->
         <scene sceneID="TF5-Vw-Kib">
@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXX-MK-pNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="1817"/>
+            <point key="canvasLocation" x="476" y="1817"/>
         </scene>
         <!--settings-->
         <scene sceneID="z73-r4-o7Z">
@@ -294,8 +294,22 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-Mg-QBc">
+                                <rect key="frame" x="16" y="1" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="5X1-gK-4xr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="EyI-Xx-yX8"/>
+                                    <constraint firstAttribute="height" constant="35" id="HIG-sW-72r"/>
+                                    <constraint firstAttribute="width" constant="35" id="RMT-n0-nn6"/>
+                                </constraints>
+                                <state key="normal" image="back.png"/>
+                                <connections>
+                                    <action selector="backButton:" destination="ShG-Pp-6C0" eventType="touchUpInside" id="9HO-xV-rhq"/>
+                                    <action selector="backPressed:" destination="tbM-OR-DP6" eventType="touchUpInside" id="wwo-i8-gCa"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeQ-l3-exA">
-                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <rect key="frame" x="16" y="44" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wac-Nm-zem"/>
                                     <constraint firstAttribute="width" constant="343" id="yPX-gF-X1P"/>
@@ -311,29 +325,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7g-aF-0kZ">
-                                <rect key="frame" x="139" y="247" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="TQp-X3-BXp"/>
-                                    <constraint firstAttribute="height" constant="30" id="xZ7-Qo-qht"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="SCAN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="ScanButton:" destination="ShG-Pp-6C0" eventType="touchUpInside" id="N4e-AB-00Y"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.17254901959999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="N7g-aF-0kZ" firstAttribute="centerX" secondItem="KjH-It-flV" secondAttribute="centerX" id="GXo-gd-J4g"/>
-                            <constraint firstItem="KeQ-l3-exA" firstAttribute="centerX" secondItem="KjH-It-flV" secondAttribute="centerX" id="NtO-6K-bLd"/>
+                            <constraint firstItem="Vdi-Mg-QBc" firstAttribute="centerX" secondItem="KjH-It-flV" secondAttribute="centerX" constant="-154" id="Uqk-vP-G7n"/>
+                            <constraint firstItem="KeQ-l3-exA" firstAttribute="centerY" secondItem="KjH-It-flV" secondAttribute="centerY" constant="-250" id="ZCC-xh-Dcn"/>
                             <constraint firstItem="rk9-eS-dOA" firstAttribute="centerX" secondItem="KjH-It-flV" secondAttribute="centerX" id="ZsP-Kx-eFX"/>
-                            <constraint firstItem="KeQ-l3-exA" firstAttribute="centerY" secondItem="KjH-It-flV" secondAttribute="centerY" constant="-274" id="eRB-0K-EI3"/>
                             <constraint firstItem="rk9-eS-dOA" firstAttribute="centerY" secondItem="KjH-It-flV" secondAttribute="centerY" constant="-147" id="fn6-A9-c63"/>
-                            <constraint firstItem="N7g-aF-0kZ" firstAttribute="centerY" secondItem="KjH-It-flV" secondAttribute="centerY" constant="-47" id="nfR-en-f44"/>
+                            <constraint firstItem="Vdi-Mg-QBc" firstAttribute="centerY" secondItem="KjH-It-flV" secondAttribute="centerY" constant="-290.5" id="kKI-bZ-F0Z"/>
+                            <constraint firstItem="KeQ-l3-exA" firstAttribute="centerX" secondItem="KjH-It-flV" secondAttribute="centerX" id="tLT-O7-a2R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DP8-ZN-71S"/>
                     </view>
@@ -344,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Puc-Az-ZWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-970" y="2092"/>
+            <point key="canvasLocation" x="-1118" y="2368"/>
         </scene>
         <!--History-->
         <scene sceneID="22G-hk-4vW">
@@ -521,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRQ-nA-uiu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="916"/>
+            <point key="canvasLocation" x="476" y="960"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fwp-RR-KBF">
@@ -937,7 +937,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Nq-Aj-f5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="134"/>
+            <point key="canvasLocation" x="1655" y="134"/>
         </scene>
     </scenes>
     <resources>

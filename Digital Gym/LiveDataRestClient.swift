@@ -26,9 +26,7 @@ class LiveDataRestClient {
             .ensure {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
-
     }
-    
 }
 
 

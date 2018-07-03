@@ -18,6 +18,7 @@ class ViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
             self.navigationController?.pushViewController(vc, animated: false)
+            
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -29,4 +30,3 @@ class ViewController: UIViewController {
 
 
 }
-
