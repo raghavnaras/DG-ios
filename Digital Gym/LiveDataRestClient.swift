@@ -18,14 +18,14 @@ class LiveDataRestClient {
         let parameters: Parameters = ["bikeID": bikeID] //parameters are basically required input in order for this method to work
 
         return firstly {
-            Alamofire.request(uri+"/bbb/rpmfrombikeid", method: .get, parameters: parameters).responseData() //sending request to server
+            Alamofire.request(uri+"/bbb/check_rpm", method: .post, parameters: parameters).responseData() //sending request to server
             }
             .map(on: q) { data, rsp in
                 try JSONDecoder().decode(Hardware.self, from: data) //server sends data back as a JSON object so you have to decode this to be able to read it
             }
-//            .ensure {
-//                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//        }
+            .ensure {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
     }
 }
 

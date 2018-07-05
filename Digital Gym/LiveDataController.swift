@@ -39,11 +39,12 @@ class LiveDataController: UIViewController{
         }
     }
     
-    @IBAction func backButton(_ sender: Any) {
+    @IBAction func HomePressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     
     
     

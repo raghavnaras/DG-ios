@@ -904,9 +904,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5m-cQ-RJr">
-                                <rect key="frame" x="104" y="248" width="166" height="30"/>
+                                <rect key="frame" x="128" y="238" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Home"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="0.99568372900000002" green="1" blue="0.98826422140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="HomePressed:" destination="PLT-WI-IwY" eventType="touchUpInside" id="J42-hv-as8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.17254901959999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -927,7 +933,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQi-St-O7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-914.39999999999998" y="1751.8740629685158"/>
+            <point key="canvasLocation" x="-914.39999999999998" y="1750.9745127436283"/>
         </scene>
     </scenes>
     <resources>
