@@ -23,9 +23,9 @@ class LiveDataRestClient {
             .map(on: q) { data, rsp in
                 try JSONDecoder().decode(Hardware.self, from: data) //server sends data back as a JSON object so you have to decode this to be able to read it
             }
-            .ensure {
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
+//            .ensure {
+//                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//        }
     }
 }
 
