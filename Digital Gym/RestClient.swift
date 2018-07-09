@@ -31,7 +31,6 @@ class RestClient{
         let q = DispatchQueue.global()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let parameters: Parameters = ["email": email, "password": password, "name": name]
-        
         return firstly {
             Alamofire.request(uri+"/bbb/setup_account", method: .post, parameters: parameters).responseData()
             }.map(on: q) { data, rsp in

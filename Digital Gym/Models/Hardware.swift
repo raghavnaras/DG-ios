@@ -15,10 +15,12 @@ class Hardware:Decodable {
         case success = "success"
         case bikeID = "bikeID"
         case token = "token"
+        case message = "message"
     }
     
-     var rpm: Int?
-     static var success: Bool?
-     static var bikeID: Int?
-     var token: String?
+    var rpm: Int?
+    var success: Bool?
+    static var bikeID: Int?
+    var token: String?
+    var message: String?
 }

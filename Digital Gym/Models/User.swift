@@ -20,7 +20,6 @@ class User:Decodable{
         case email = "email"
        
     }
-    
     var id: Int?
     var token: String?
     var success: Bool?

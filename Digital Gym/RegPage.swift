@@ -26,7 +26,8 @@ class RegPage: UIViewController, UITextFieldDelegate{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
                 self.navigationController?.pushViewController(vc, animated: true)
-            }else{
+            }
+            else {
                 self.alert(message: user.message!)
             }
         }
