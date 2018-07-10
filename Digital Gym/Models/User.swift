@@ -18,6 +18,7 @@ class User:Decodable{
         case image = "image"
         case name = "name"
         case email = "email"
+        case password = "password"
        
     }
     var id: Int?
@@ -27,5 +28,6 @@ class User:Decodable{
     var name: String?
     var message: String?
     var email: String?
+    var password: Int?
 }
 

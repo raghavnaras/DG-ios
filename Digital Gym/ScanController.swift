@@ -135,7 +135,7 @@ extension ScanController: AVCaptureMetadataOutputObjectsDelegate {
             
             if metadataObj.stringValue != nil {
                 launchApp(decodedURL: metadataObj.stringValue!)
-                messageLabel.text = metadataObj.stringValue
+                messageLabel.text = "Your BikeID is " + metadataObj.stringValue! + ". Redirecting you."
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) { //adding delay so that it is not immediate
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)

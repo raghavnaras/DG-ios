@@ -15,7 +15,6 @@ class RegPage: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    
     @IBAction func createAccountPressed(_ sender: Any) {
         
         //create user

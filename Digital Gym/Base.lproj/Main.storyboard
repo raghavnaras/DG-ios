@@ -178,7 +178,7 @@
         <!--settings-->
         <scene sceneID="z73-r4-o7Z">
             <objects>
-                <viewController id="QH4-Jc-dbH" customClass="SettingsController" customModule="Digital_Gym" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsController" id="QH4-Jc-dbH" customClass="SettingsController" customModule="Digital_Gym" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAi-dA-C9z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,6 +221,10 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteAccount:" destination="QH4-Jc-dbH" eventType="touchUpInside" id="W6j-91-hNC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ajq-gR-mGp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4T-Vv-aGk" customClass="CustomizeButton" customModule="Digital_Gym" customModuleProvider="target">
                                 <rect key="frame" x="22" y="96" width="331" height="56"/>
@@ -944,4 +948,7 @@
         <image name="today.png" width="32" height="32"/>
         <image name="user.png" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ajq-gR-mGp"/>
+    </inferredMetricsTieBreakers>
 </document>

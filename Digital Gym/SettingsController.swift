@@ -16,6 +16,12 @@ class SettingsController: UIViewController{
         UserDefaults.standard.set(false, forKey: "IsLoggedIn")
     }
     
+    @IBAction func deleteAccount(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "IsLoggedIn")
+        
+    }
+    
+    
 }
 
 

@@ -24,6 +24,7 @@ class LiveDataController: UIViewController{
             if(hardware.success)! {
                 global_hardware = hardware
                 self.LiveDataOutput.text = "Live data found. Scan QR code to view"
+                self.alert(message: hardware.message!)
             }
             else {
                 self.alert(message: hardware.message!)

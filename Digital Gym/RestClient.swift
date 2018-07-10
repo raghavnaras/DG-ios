@@ -39,5 +39,22 @@ class RestClient{
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
+    
+    func deleteAccount(email: String, password: String) -> Promise<User> {
+        let q = DispatchQueue.global()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let parameters: Parameters = ["email": email, "password": password]
+        return firstly {
+            Alamofire.request(uri+"/bbb/deleteaccount", method: .post, parameters: parameters).responseData()
+            }.map(on: q) { data, rsp in
+                try JSONDecoder().decode(User.self, from: data)
+            }.ensure {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
+    }
+
+    
+
 
 }
+
