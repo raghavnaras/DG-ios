@@ -13,14 +13,14 @@ class Hardware:Decodable {
     enum codingKeys: String, CodingKey {
         case rpm = "rpm"
         case success = "success"
-        case bikeID = "bikeID"
+        case machineID = "bikeID"
         case token = "token"
         case message = "message"
     }
     
     var rpm: Int?
     var success: Bool?
-    static var bikeID: Int?
+    static var machineID: Int?
     var token: String?
     var message: String?
 }

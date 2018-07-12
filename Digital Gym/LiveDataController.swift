@@ -19,7 +19,7 @@ class LiveDataController: UIViewController{
          self.LiveDataOutput.text = "No live data found. Start biking to see live data."
         
         let rest = LiveDataRestClient()
-        _ = rest.getCurrentRpm(bikeID: Hardware.bikeID!).done { (hardware) in
+        _ = rest.getCurrentRpm(machineID: Hardware.machineID!).done { (hardware) in
         
             if(hardware.success)! {
                 global_hardware = hardware
