@@ -1,6 +1,7 @@
 
 import UIKit
 import AVFoundation
+import UserNotifications
 
 class ScanController: UIViewController {
     
@@ -145,6 +146,16 @@ extension ScanController: AVCaptureMetadataOutputObjectsDelegate {
                 
                 let machineID = Int(metadataObj.stringValue!) //this is bikeid
                 Hardware.machineID = machineID //you want bikeid variable accessible to all files in the project so you make it global
+                
+                let content = UNMutableNotificationContent()
+                content.title = "It has been a full day since your last scan."
+                content.body = "Scan today to update your workout stats"
+                content.badge = 1
+                
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
              
             }
         }

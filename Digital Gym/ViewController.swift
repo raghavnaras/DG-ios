@@ -20,6 +20,8 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: false)
             
         }
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

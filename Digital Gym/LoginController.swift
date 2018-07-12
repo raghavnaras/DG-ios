@@ -15,15 +15,19 @@ class LoginController:UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    @IBAction func loginPressed(_ sender: Any) {
+    
+    @IBAction func loginPressed(_ sender: Any) { //this is an action so that if the loginbutton is pressed the code below happens
         let rest = RestClient()
         let _ = rest.login(email: emailInput.text!, password: passwordInput.text!).done { (user) in
             if(user.success)!{
+                UserDefaults.standard.set(true, forKey: "IsLoggedIn")
                 global_user = user
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
                 self.navigationController?.pushViewController(vc, animated: true)
-            }else{
+            }
+                
+            else{
                 self.alert(message: user.message!)
             }
         }
