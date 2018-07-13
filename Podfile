@@ -8,6 +8,8 @@ target 'Digital Gym' do
   # Pods for Digital Gym
 
   pod 'PromiseKit/Alamofire', '~> 6.0'
+  pod 'SwiftCharts', '~> 0.6.1'
+
 
 
 

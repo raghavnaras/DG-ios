@@ -46,6 +46,7 @@
 		0EA08911205CFBC3003C13CE /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0890C205CFBC3003C13CE /* history.png */; };
 		0EA08913205CFD60003C13CE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA08912205CFD60003C13CE /* SettingsController.swift */; };
 		1B7A1F686F4DB490A4EB5E87 /* Pods_Digital_GymUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8F36D53A9DE9BA27377838 /* Pods_Digital_GymUITests.framework */; };
+		A083C1FD20F87F3400B93BD0 /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A083C1FC20F87F3400B93BD0 /* ChartController.swift */; };
 		A0B4487220D9FB08005BCFE8 /* LiveDataRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4487120D9FB08005BCFE8 /* LiveDataRestClient.swift */; };
 		A0D25C4220DAF33F00AA47FF /* Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D25C4120DAF33F00AA47FF /* Hardware.swift */; };
 		AB868D203E04A665920959C8 /* Pods_Digital_Gym.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B7E3DFA246C59BA81F43F1 /* Pods_Digital_Gym.framework */; };
@@ -122,6 +123,7 @@
 		3889BBAC5DA6C629FB76D5C8 /* Pods-Digital GymTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital GymTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digital GymTests/Pods-Digital GymTests.release.xcconfig"; sourceTree = "<group>"; };
 		3BEB557A2B9B86765B7B0765 /* Pods-Digital Gym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital Gym.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digital Gym/Pods-Digital Gym.release.xcconfig"; sourceTree = "<group>"; };
 		76AEE7E45A114837ED73C917 /* Pods-Digital GymUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital GymUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Digital GymUITests/Pods-Digital GymUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A083C1FC20F87F3400B93BD0 /* ChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
 		A0B4487120D9FB08005BCFE8 /* LiveDataRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataRestClient.swift; sourceTree = "<group>"; };
 		A0D25C4120DAF33F00AA47FF /* Hardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hardware.swift; sourceTree = "<group>"; };
 		C20C1489BFF24C0D9A333CC3 /* Pods-Digital Gym.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital Gym.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Digital Gym/Pods-Digital Gym.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				0E805C33205CED870019DA91 /* AppDelegate.swift */,
 				0E805C35205CED870019DA91 /* ViewController.swift */,
 				0E805C37205CED870019DA91 /* Main.storyboard */,
+				A083C1FC20F87F3400B93BD0 /* ChartController.swift */,
 				0E094250205D047D003C470C /* ProfileController.swift */,
 				0E805C3D205CED870019DA91 /* Assets.xcassets */,
 				0E805C7E205CEF6F0019DA91 /* LoginController.swift */,
@@ -325,7 +328,6 @@
 				0E805C2D205CED870019DA91 /* Frameworks */,
 				0E805C2E205CED870019DA91 /* Resources */,
 				69A3D06C8A64B5A967FF4BA0 /* [CP] Embed Pods Frameworks */,
-				007805FB2293F2B77E83A8F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,8 +346,6 @@
 				0E805C43205CED870019DA91 /* Sources */,
 				0E805C44205CED870019DA91 /* Frameworks */,
 				0E805C45205CED870019DA91 /* Resources */,
-				84F3F0FA481465F7B14C7DB5 /* [CP] Embed Pods Frameworks */,
-				DCDD388A1910C410A73A560E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,8 +365,6 @@
 				0E805C4E205CED870019DA91 /* Sources */,
 				0E805C4F205CED870019DA91 /* Frameworks */,
 				0E805C50205CED870019DA91 /* Resources */,
-				B3F69D25C13D023B2E77E195 /* [CP] Embed Pods Frameworks */,
-				29F7B8F406CE55459674AAA0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -468,49 +466,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		007805FB2293F2B77E83A8F4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital Gym/Pods-Digital Gym-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0720FB47AA1B39DB04629383 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Digital GymUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		29F7B8F406CE55459674AAA0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital GymUITests/Pods-Digital GymUITests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5BB41DAE47ACC9BF92D48389 /* [CP] Check Pods Manifest.lock */ = {
@@ -519,13 +490,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Digital GymTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		69A3D06C8A64B5A967FF4BA0 /* [CP] Embed Pods Frameworks */ = {
@@ -534,9 +508,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Digital Gym/Pods-Digital Gym-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -549,58 +530,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Digital Gym-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		84F3F0FA481465F7B14C7DB5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital GymTests/Pods-Digital GymTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B3F69D25C13D023B2E77E195 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital GymUITests/Pods-Digital GymUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCDD388A1910C410A73A560E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital GymTests/Pods-Digital GymTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -620,6 +559,7 @@
 				0E805C36205CED870019DA91 /* ViewController.swift in Sources */,
 				0E094251205D047D003C470C /* ProfileController.swift in Sources */,
 				0E805C34205CED870019DA91 /* AppDelegate.swift in Sources */,
+				A083C1FD20F87F3400B93BD0 /* ChartController.swift in Sources */,
 				A0D25C4220DAF33F00AA47FF /* Hardware.swift in Sources */,
 				0EA088FF205CF0A8003C13CE /* CustomButton.swift in Sources */,
 				0EA08907205CF877003C13CE /* HistoryCell.swift in Sources */,

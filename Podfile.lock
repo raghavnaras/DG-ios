@@ -4,14 +4,23 @@ PODS:
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
   - PromiseKit/CorePromise (6.2.1)
+  - SwiftCharts (0.6.1)
 
 DEPENDENCIES:
   - PromiseKit/Alamofire (~> 6.0)
+  - SwiftCharts (~> 0.6.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - PromiseKit
+    - SwiftCharts
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   PromiseKit: edaca6f0a7ed73b08c287600537d13867a7fabc7
+  SwiftCharts: 77378d6cf667e95f9c79a745b6778e66eed5339c
 
-PODFILE CHECKSUM: ca91ebb433fd1977fd021413f0bbbb695018b38d
+PODFILE CHECKSUM: 33c939c48a14c5049e17d366af109f7f9eb56db0
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
