@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import SwiftCharts
 
 class LiveDataController: UIViewController{
     
@@ -19,15 +20,22 @@ class LiveDataController: UIViewController{
          self.LiveDataOutput.text = "No live data found. Start biking to see live data."
         
         let rest = LiveDataRestClient()
-        _ = rest.getCurrentRpm(machineID: Hardware.machineID!).done { (hardware) in
         
+        if (Hardware.machineID == nil) {
+            self.LiveDataOutput.text="Scan QR code to view live data"
+        }
+        
+        _ = rest.getCurrentRpm(machineID: Hardware.machineID!).done { (hardware) in
+            
+         
             if(hardware.success)! {
                 global_hardware = hardware
                 self.LiveDataOutput.text = "Live data found. Scan QR code to view"
                 self.alert(message: hardware.message!)
             }
             else {
-                self.alert(message: hardware.message!)
+                print("got here")
+                //self.alert(message: hardware.message!)
             }
     }
 }
