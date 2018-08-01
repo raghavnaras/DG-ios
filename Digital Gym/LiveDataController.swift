@@ -13,11 +13,33 @@ import SwiftCharts
 class LiveDataController: UIViewController{
     
     @IBOutlet weak var LiveDataOutput: UILabel!
+    var ChartView: BarsChart!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         self.LiveDataOutput.text = "No live data found. Start biking to see live data."
+        let chartConfig = BarsChartConfig(valsAxisConfig: ChartAxisConfig(from: 0, to: 10, by: 1))
+        
+        let frame = CGRect(x: 0, y: 270, width: self.view.frame.width, height: 450)
+        
+        let chart = BarsChart(
+            frame: frame,
+            chartConfig: chartConfig,
+            xTitle: "Time",
+            yTitle: "RPM",
+            bars: [
+                ("12:54", 2)
+        ],
+            color: UIColor.white,
+            barWidth:15
+        )
+        
+        self.view.addSubview(chart.view)
+        self.ChartView = chart
+        
+        
+        
+        self.LiveDataOutput.text = "No live data found. Start biking to see live data."
         
         let rest = LiveDataRestClient()
         
@@ -34,7 +56,7 @@ class LiveDataController: UIViewController{
                 self.alert(message: hardware.message!)
             }
             else {
-                print("got here")
+                print("hi")
                 //self.alert(message: hardware.message!)
             }
     }
