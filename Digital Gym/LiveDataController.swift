@@ -13,7 +13,7 @@ import SwiftCharts
 class LiveDataController: UIViewController{
     
     @IBOutlet weak var LiveDataOutput: UILabel!
-    var ChartView: BarsChart!
+    var ChartView: Chart!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +57,7 @@ class LiveDataController: UIViewController{
             }
             else {
                 print("hi")
+                print(hardware.rpm!)
                 //self.alert(message: hardware.message!)
             }
     }
