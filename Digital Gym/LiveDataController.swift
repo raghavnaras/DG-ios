@@ -26,6 +26,8 @@ class LiveDataController: UIViewController{
             self.LiveDataOutput.text="Scan QR code to view live data"
         }
         
+        else {
+        
         _ = rest.getCurrentRpm(machineID: Hardware.machineID!).done { (hardware) in
             
             let chartConfig = BarsChartConfig(valsAxisConfig: ChartAxisConfig(from: 0, to: 10, by: 1))
@@ -59,6 +61,8 @@ class LiveDataController: UIViewController{
                 //self.alert(message: hardware.message!)
             }
     }
+            
+        }
 }
     @IBAction func HomePressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
