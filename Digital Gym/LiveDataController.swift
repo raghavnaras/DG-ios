@@ -62,7 +62,8 @@ class LiveDataController: UIViewController{
                 }
             }
         }
-}
+    }
+    
     @IBAction func HomePressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
