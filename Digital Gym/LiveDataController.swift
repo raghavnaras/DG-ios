@@ -32,7 +32,7 @@ class LiveDataController: UIViewController{
             
             let chartConfig = BarsChartConfig(valsAxisConfig: ChartAxisConfig(from: 0, to: 10, by: 1))
             
-            let frame = CGRect(x: 0, y: 270, width: self.view.frame.width, height: 450)
+            let frame = CGRect(x: 0, y: 270, width: self.view.frame.width, height: 300)
             
             let chart = BarsChart(
                 frame: frame,
