@@ -30,7 +30,11 @@ class LiveDataController: UIViewController{
         
             _ = rest.getCurrentRpm(machineID: Hardware.machineID!).done { (hardware) in
                 
-                let chartConfig = BarsChartConfig(valsAxisConfig: ChartAxisConfig(from: 0, to: 10, by: 1))
+                let chartConfig = BarsChartConfig(chartSettings: ChartSettings(),
+                                                  valsAxisConfig: ChartAxisConfig(from: 0, to: 10, by: 1),
+                                                  xAxisLabelSettings: ChartLabelSettings(fontColor: UIColor.white),
+                                                  yAxisLabelSettings: ChartLabelSettings(fontColor: UIColor.white),
+                                                  guidelinesConfig: GuidelinesConfig(lineColor: UIColor.white))
                 
                 let frame = CGRect(x: 0, y: 270, width: self.view.frame.width, height: 300)
                 
