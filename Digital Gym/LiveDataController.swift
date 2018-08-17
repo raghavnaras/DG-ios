@@ -31,7 +31,7 @@ class LiveDataController: UIViewController{
             _ = rest.getCurrentRpm(machineID: Hardware.machineID!).done { (hardware) in
                 
                 let chartConfig = BarsChartConfig(chartSettings: ChartSettings(),
-                                                  valsAxisConfig: ChartAxisConfig(from: 0, to: 10, by: 1),
+                                                  valsAxisConfig: ChartAxisConfig(from: 0, to: 200, by: 20),
                                                   xAxisLabelSettings: ChartLabelSettings(fontColor: UIColor.white),
                                                   yAxisLabelSettings: ChartLabelSettings(fontColor: UIColor.white),
                                                   guidelinesConfig: GuidelinesConfig(lineColor: UIColor.white))
@@ -54,10 +54,11 @@ class LiveDataController: UIViewController{
                 self.ChartView = chart
                 
              
-                if(hardware.success)! {
+                if(hardware.success)! {  //this if statement is never entered; indicates app not updating w/ new data
                     global_hardware = hardware
+                    print(hardware.rpm!)
                     self.LiveDataOutput.text = "Live data found. Scan QR code to view"
-                    self.alert(message: hardware.message!)
+                    //self.alert(message: hardware.message!)
                 }
                 else {
                     print("hi")
