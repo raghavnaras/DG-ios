@@ -1,2 +1,1 @@
-# DG-ios
-ios app for Rice Digital Gym project
+This is the IOS application for the Digital Gym project under Rice University's Scalable Health Labs. 
