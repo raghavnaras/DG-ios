@@ -4,5 +4,5 @@ This is the iOS for the Digital Gym project under Rice University's Scalable Hea
 
 Here is a link to a demo of the application at it's current state: https://youtu.be/txguU7fPqOk
 
-
-
+## Credits 
+Thanks to [Aidan Curtis](https://github.com/southpawac)
