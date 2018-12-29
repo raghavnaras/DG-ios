@@ -1,4 +1,4 @@
-#Digital Gym iOS Application 
+# Digital Gym iOS Application 
 
 This is the iOS for the Digital Gym project under Rice University's Scalable Health Labs. It includes a login page, a chart of recent workout data, and a QR code scanner where users can scan the QR code of their workout bike to see live data like RPM. 
 
